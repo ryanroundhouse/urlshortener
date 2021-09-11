@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Url } from './url.interface';
 import { UrlService } from './url.service';
 
 @Component({

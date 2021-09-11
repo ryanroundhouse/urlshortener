@@ -36,6 +36,9 @@
     "front-e2e": {
       "tags": [],
       "implicitDependencies": ["front"]
+    },
+    "shortlib": {
+      "tags": []
     }
   }
 }

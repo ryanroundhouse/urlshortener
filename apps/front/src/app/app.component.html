@@ -4,10 +4,8 @@
 <main>
   <ul class="url-list">
     <li *ngFor="let url of urls" class="url-item">
-      <div>
         <h3>{{ url.code }}</h3>
         <p>{{ url.url }}</p>
-      </div>
       <button (click)="deleteUrl(url.code)">Delete</button>
     </li>
   </ul>

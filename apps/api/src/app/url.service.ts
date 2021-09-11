@@ -34,6 +34,18 @@ export class UrlService {
     return null;
   }
 
+  isValidHttpUrl(string) {
+    let url;
+    
+    try {
+      url = new URL(string);
+    } catch (_) {
+      return false;  
+    }
+  
+    return url.protocol === "http:" || url.protocol === "https:";
+  }
+
   static async delete(code: string): Promise<boolean> {
     const deletedUrl: IUrl | void = await Url.findOneAndDelete({
       code: code,

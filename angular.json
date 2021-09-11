@@ -166,6 +166,31 @@
           }
         }
       }
+    },
+    "shortlib": {
+      "projectType": "library",
+      "root": "libs/shortlib",
+      "sourceRoot": "libs/shortlib/src",
+      "prefix": "urlshortener",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/shortlib"],
+          "options": {
+            "jestConfig": "libs/shortlib/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/shortlib/src/**/*.ts",
+              "libs/shortlib/src/**/*.html"
+            ]
+          }
+        }
+      }
     }
   },
   "cli": {

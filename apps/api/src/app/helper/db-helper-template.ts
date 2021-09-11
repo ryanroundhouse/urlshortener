@@ -1,6 +1,8 @@
 import * as mongoose from 'mongoose';
 
-export class DBHelper {
+// rename DBHelperTemplate to DBHelper and change connection string to
+// mongodb://username:password@host:port/database?options...
+export class DBHelperTemplate {
   static init(): void {
     mongoose
       .connect('mongodb://localhost/test')

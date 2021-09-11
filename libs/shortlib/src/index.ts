@@ -1,1 +1,1 @@
-export * from './lib/shortlib.module';
+export * from './lib/url.interface';

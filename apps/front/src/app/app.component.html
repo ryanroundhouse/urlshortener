@@ -1,19 +1,31 @@
 <header class="flex">
   <h1>Welcome to {{ title }}!</h1>
 </header>
-<main>
+<main class="centered">
+  <div class="add-url-form">
+    <label class="mx-3" for="code">Code</label>
+    <input
+      class="mx-3"
+      id="code"
+      type="text"
+      placeholder="Code"
+      [(ngModel)]="newUrl.code"
+    />
+    <label class="mx-3" for="url">Url</label>
+    <input
+      class="mx-3"
+      id="url"
+      type="text"
+      placeholder="Url"
+      [(ngModel)]="newUrl.url"
+    />
+    <button class="mx-3" (click)="createUrl()">Create</button>
+  </div>
   <ul class="url-list">
     <li *ngFor="let url of urls" class="url-item">
-        <h3>{{ url.code }}</h3>
-        <p>{{ url.url }}</p>
-      <button (click)="deleteUrl(url.code)">Delete</button>
+      <h3 class="mx-3">{{ url.code }}</h3>
+      <p class="mx-3">{{ url.url }}</p>
+      <button class="mx-3" (click)="deleteUrl(url.code)">Delete</button>
     </li>
   </ul>
-  <div class="add-url-form">
-    <label for="code">Code</label>
-    <input id="code" type="text" placeholder="Code" [(ngModel)]="newUrl.code" />
-    <label for="url">Url</label>
-    <input id="url" type="text" placeholder="Url" [(ngModel)]="newUrl.url" />
-    <button (click)="createUrl()">Create</button>
-  </div>
 </main>
